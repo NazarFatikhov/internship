@@ -1,0 +1,14 @@
+alter table profile add column IS_RECRUITER boolean ;
+alter table profile add column IS_CRM_AGENT boolean ;
+alter table profile add column BIOGRAPHICAL_INFO varchar(1023) ;
+alter table profile add column IS_HR_MANAGER boolean ;
+alter table profile add column IS_CHOOSING_VISUAL_EDITOR boolean ;
+alter table profile add column ADMIN_COLOR_SCHEME varchar(50) ;
+alter table profile add column IS_CRM_MANAGER boolean ;
+alter table profile add column IS_CHOOSING_TOOLBAR boolean ;
+alter table profile add column IS_CHOOSING_SYNTAX_HIGHLIGHTING boolean ;
+alter table profile add column IS_CHOOSING_KEYBOARD_STRUCTS boolean ;
+alter table profile add column IS_ACCOUNTING_MANAGER boolean ;
+alter table profile add column EMAIL varchar(255) ;
+alter table profile add column WEBSITE varchar(255) ;
+alter table profile add column IS_NOTIFIABLE boolean ;

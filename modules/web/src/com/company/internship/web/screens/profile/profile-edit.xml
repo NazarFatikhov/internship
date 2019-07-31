@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.company.internship.web.screens.profile">
+    <data>
+        <instance id="profileDc"
+                  class="com.company.internship.entity.Employee"
+                  view="profile-view">
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="profileDc">
+            <column width="250px">
+                <textField id="usernameField" property="username"/>
+                <textField id="nicknameField" property="nickname"/>
+                <textField id="firstNameField" property="firstName"/>
+                <textField id="lastNameField" property="lastName"/>
+                <lookupField id="displayNameField" property="displayName"/>
+                <textArea id="passwordField" property="hashPassword" rows="1" caption="Password"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+        <groupBox caption="Photo" spacing="true"
+                  height="300px" width="300px" expand="image">
+            <image id="image"
+                   width="100%"
+                   align="MIDDLE_CENTER"
+                   scaleMode="CONTAIN"/>
+            <hbox align="BOTTOM_LEFT"
+                  spacing="true">
+                <upload id="uploadField"/>
+                <button id="downloadImageBtn"
+                        caption="Download"
+                        invoke="onDownloadImageBtnClick"/>
+                <button id="clearImageBtn"
+                        caption="Clear"
+                        invoke="onClearImageBtnClick"/>
+            </hbox>
+        </groupBox>
+    </layout>
+</window>
